@@ -1,11 +1,12 @@
 import React from "react"
-
+import Counter from "./counter"
 type Props = {
   params: {
     productId: string
     reviewId: string
   }
 }
+
 const Review = (props: Props) => {
   return (
     <div>
@@ -13,6 +14,7 @@ const Review = (props: Props) => {
         review about product {props.params.productId} is great review{" "}
         {props.params.reviewId}
       </h1>
+      <Counter />
     </div>
   )
 }
