@@ -2,13 +2,14 @@
 
 import { useEffect } from 'react'
 
-export default function Error({
-  error,
-  reset,
-}: {
+type Props = {
   error: Error & { digest?: string }
   reset: () => void
-}) {
+}
+
+export default function Error(props: Props) {
+  const { error, reset } = props
+
   useEffect(() => {
     // Log the error to an error reporting service
     console.error(error)
