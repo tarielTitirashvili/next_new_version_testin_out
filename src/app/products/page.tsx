@@ -1,12 +1,15 @@
 import React from "react"
 import Link from "next/link"
 import BackButton from '@/components/buttons/backButton'
+import ErrorCausingButton from '@/components/buttons/buttonForErrorCheck'
 
 type Props = {}
 
 const Products = (props: Props) => {
   return (
     <div>
+      <ErrorCausingButton />
+
       <span className="flex items-center">
         <h1>
           <Link href={'products/1'}>Products list</Link>
