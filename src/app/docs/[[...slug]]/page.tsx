@@ -19,7 +19,9 @@ function Docs(props: Props) {
         </>
       ) : (
         <>
-          <Link style={{display: 'block'}} href={"docs/testFeature"}>test feature</Link>
+          <Link style={{ display: "block" }} href={"docs/testFeature"}>
+            test feature
+          </Link>
           <Link href={"docs/testFeature/testExample"}>
             test feature with test example
           </Link>

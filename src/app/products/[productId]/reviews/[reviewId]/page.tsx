@@ -1,4 +1,5 @@
 import React from "react"
+import { notFound } from "next/navigation"
 import Counter from "./counter"
 type Props = {
   params: {
@@ -8,6 +9,7 @@ type Props = {
 }
 
 const Review = (props: Props) => {
+  if (+props.params.reviewId > 1000) notFound()
   return (
     <div>
       <h1>
