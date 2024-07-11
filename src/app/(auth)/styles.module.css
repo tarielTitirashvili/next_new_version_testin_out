@@ -1,0 +1,9 @@
+.active {
+  color: red;
+  font-weight: 700;
+}
+.navLinksContainer {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0;
+}
