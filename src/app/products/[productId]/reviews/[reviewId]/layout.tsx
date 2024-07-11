@@ -1,3 +1,4 @@
+import BackButton from "@/components/buttons/backButton"
 import { Metadata } from "next"
 import React from "react"
 
@@ -18,6 +19,7 @@ function Layout({ children }: Props) {
         nested Layout will not completely overwrite parent layouts it will be
         their addition
       </h2>
+      <BackButton />
     </div>
   )
 }

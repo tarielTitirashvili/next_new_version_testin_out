@@ -1,0 +1,14 @@
+.navContainer {
+  padding: 16px;
+  display: flex;
+  gap: 8px;
+  background-color: aqua;
+  border-radius: 12px;
+}
+
+.active {
+  color: red;
+}
+.active:hover {
+  color: red;
+}
