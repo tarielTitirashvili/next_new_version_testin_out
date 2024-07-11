@@ -2,8 +2,14 @@ import React from "react"
 import Link from "next/link"
 import BackButton from '@/components/buttons/backButton'
 import ErrorCausingButton from '@/components/buttons/buttonForErrorCheck'
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: 'products',
+}
 
 type Props = {}
+
 
 const Products = (props: Props) => {
   return (

@@ -3,13 +3,11 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import ErrorCausingButton from '@/components/buttons/buttonForErrorCheck'
 
-type Props = {}
-
 export const metadata: Metadata = {
   title: 'store manager',
 } 
 
-const HomePage = (props: Props) => {
+const HomePage = () => {
   return (
     <div>
       <h1>HomePage</h1>

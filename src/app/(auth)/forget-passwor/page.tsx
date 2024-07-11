@@ -1,8 +1,6 @@
 import React from "react"
 
-type Props = {}
-
-function ForgetPassword({}: Props) {
+function ForgetPassword() {
   return <div>Forget Password Page</div>
 }
 

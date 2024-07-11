@@ -1,8 +1,6 @@
 import React from "react"
 
-type Props = {}
-
-function Register({}: Props) {
+function Register() {
   return <div>Register Page</div>
 }
 

@@ -1,10 +1,18 @@
-"use client"
+// "use client"
+import { Metadata } from "next"
 import Link from "next/link"
 import React from "react"
 
 type Props = {
   params: {
     slug: string[]
+  }
+}
+
+export const generateMetadata = (props: Props): Metadata => {
+  // this function can also be asynchronous and based on request we can return metadata and this does't works in client side apps
+  return {
+    title: `Docs ${props?.params?.slug ? props.params.slug[0] : ""}`,
   }
 }
 

@@ -1,12 +1,18 @@
 import React from "react"
 import BackButton from "../../../components/buttons/backButton"
 import Link from "next/link"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "reviews",
+}
 
 type Props = {
   params: {
     productId: string
   }
 }
+
 
 const ProductId = (props: Props) => {
   return (

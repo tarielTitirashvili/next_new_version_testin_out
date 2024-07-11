@@ -1,8 +1,11 @@
+import { Metadata } from "next"
 import React from "react"
 
-type Props = {}
+export const metadata: Metadata = {
+  title: "about",
+}
 
-const About = (props: Props) => {
+const About = () => {
   return <div>About</div>
 }
 

@@ -36,6 +36,9 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 My Docs
+
 1. Route groups are used to better organize our project you can unify there pages with same layout error page and related functionalities without changing their url's.
-2. [id] is how we define dynamic routes but if we use [[route]] bubble square brackets we will be able to catch all routes like in example with docs file here, if we call [[...routes]] our file wi will be able to catch parent route too.
+2. [id] is how we define dynamic routes but if we use [[route]] bubble square brackets we will be able to catch all routes like in example with docs file here, if we call [[...routes]] our file will be able to catch parent route too.
 3. layouts aren't replaying each other they are adding on top of their parent components layouts.
+4. metadata if you want use dineric metadata you should use generateMetadata function with exact same name and if you want use static one you need to export metadata with same name
+   also neither of this will not work in the client side components
