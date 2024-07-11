@@ -1,9 +1,9 @@
 "use client"
-import { Metadata } from "next"
+// import { Metadata } from "next"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import React from "react"
-import css from './styles.module.css'
+import React, { useState } from "react"
+import css from "./styles.module.css"
 
 // export const metadata: Metadata = {
 //   title: {
@@ -29,6 +29,7 @@ type Props = {
 
 function AuthLayout({ children }: Props) {
   const pathName = usePathname()
+  const [input, setInput] = useState<string>()
   console.log(pathName)
 
   return (
@@ -37,13 +38,17 @@ function AuthLayout({ children }: Props) {
         {navLinks.map(({ title, navLink }) => {
           const isActive = pathName.startsWith(navLink)
           return (
-            <Link href={navLink} key={navLink} className={`${isActive ? css.active : ''}`}>
+            <Link
+              href={navLink}
+              key={navLink}
+              className={`${isActive ? css.active : ""}`}
+            >
               {title}
             </Link>
           )
         })}
       </div>
-      <h1> tariel </h1>
+      <input value={input} onChange={(e) => setInput(e.target.value)} />
       {children}
     </div>
   )
