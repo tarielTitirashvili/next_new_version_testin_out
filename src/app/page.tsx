@@ -7,7 +7,7 @@ type Props = {}
 
 export const metadata: Metadata = {
   title: 'store manager',
-}
+} 
 
 const HomePage = (props: Props) => {
   return (
