@@ -2,13 +2,13 @@ import Card from "@/components/cards/card"
 import Link from "next/link"
 import React from "react"
 
-const UsersPage = () => {
+function Archived() {
   return (
     <Card>
-      <Link href={"dashboard/archived"}>Archived</Link>
-      Notifications
+      <h1>Archived Notifications</h1>
+      <Link href={"/dashboard"}>Default</Link>
     </Card>
   )
 }
 
-export default UsersPage
+export default Archived
