@@ -36,8 +36,7 @@ export default function RootLayout({
         <div className={css.navContainer}>
           {naRoutes.map(({ navLink, title }) => {
             let isActive = pathname.startsWith(navLink)
-            if(navLink === '/' && pathname !== '/')
-              isActive = false
+            if (navLink === "/" && pathname !== "/") isActive = false
             return (
               <Link
                 href={navLink}
@@ -49,11 +48,10 @@ export default function RootLayout({
             )
           })}
         </div>
-        <header style={{ flexGrow: 0 }}>
-          <p>Header</p>
-        </header>
-        <div style={{ flexGrow: "1", padding: "12px 0" }}>{children}</div>
-        <footer style={{ flexGrow: 0 }}>Footer</footer>
+        <div className={css.appContainer}>
+          <div style={{ flexGrow: "1", padding: "12px 0" }}>{children}</div>
+          <footer style={{ flexGrow: 0 }}>Footer</footer>
+        </div>
       </body>
     </html>
   )

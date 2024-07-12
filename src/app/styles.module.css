@@ -3,7 +3,6 @@
   display: flex;
   gap: 8px;
   background-color: aqua;
-  border-radius: 12px;
 }
 
 .active {
@@ -11,4 +10,11 @@
 }
 .active:hover {
   color: red;
+}
+
+.appContainer {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
