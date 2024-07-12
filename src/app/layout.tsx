@@ -21,6 +21,7 @@ const naRoutes: TRoute[] = [
   { title: "Docs", navLink: "/docs" },
   { title: "Products", navLink: "/products" },
   { title: "Profile", navLink: "/profile" },
+  { title: "Dashboard", navLink: "/dashboard" },
 ]
 
 export default function RootLayout({

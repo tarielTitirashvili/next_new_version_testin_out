@@ -1,0 +1,12 @@
+.contentContainer {
+  display: flex;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.usersAndRevenueContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}

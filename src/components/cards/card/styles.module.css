@@ -1,0 +1,24 @@
+.card {
+  width: auto;
+  min-height: 254px;
+  border-radius: 20px;
+  background: rgb(255, 251, 0);
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+}
+
+.cardDetails {
+  color: black;
+  height: 100%;
+  gap: 0.5em;
+  display: grid;
+  place-content: center;
+}
+.card:hover {
+  border-color: green;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 8px 10px 21px green;
+}

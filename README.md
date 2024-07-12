@@ -44,3 +44,4 @@ My Docs
    also neither of this will not work in the client side components
 5. metadata title property can be object in which we can set up templates for nested routes (if we will write %s in string it will be replaced by children rout's title) and define default property child routes in whom title is not specified, also you can specify absolute property for title which will overwrite parent template completely
 6. if we want to have routing behavior which will reset state when user is navigated to new route we should use template in case of layout state wasn't updating
+7. error.tsx file will not catch errors in the layout and template files of same directory! also it might be good idea to add reset function for error.tsx component.
