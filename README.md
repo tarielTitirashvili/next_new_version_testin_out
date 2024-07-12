@@ -48,4 +48,4 @@ My Docs
 
 8. for unmatched routes we need to create default.tsx files too because it is used as a fallback during refreshing page also we need to create default.tsx file in the directory where unmatched routes are created in our case we needed it in dashboard directory
 
-9. intercepted routes we can display different pages by intercepting routes if we will use (.) route we will replace route in same directory if we use (..) will replace route in ../ directory and if we will use (...) will replace route in app directory
+9. intercepted routes we can display different pages by intercepting routes if we will use (.) route we will replace route in same directory if we use (..) will replace route in ../ directory and if we will use (...) will replace route in app directory P.S. example is in f1 folder
