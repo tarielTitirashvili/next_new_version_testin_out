@@ -20,7 +20,6 @@ type TRoutes = {
 const navLinks: TRoutes[] = [
   { title: "Login", navLink: "/login" },
   { title: "Register", navLink: "/register" },
-  { title: "Forget Password", navLink: "/forget-password" },
 ]
 
 type Props = {
@@ -50,6 +49,13 @@ function AuthLayout({ children }: Props) {
       </div>
       <input value={input} onChange={(e) => setInput(e.target.value)} />
       {children}
+      {
+        !pathName.startsWith('/forget-password') &&<Link
+        href={'/forget-password'}
+      >
+        Forget Password?
+      </Link>
+      }
     </div>
   )
 }

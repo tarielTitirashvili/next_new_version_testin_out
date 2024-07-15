@@ -1,8 +1,8 @@
-"use client"
-import "./main.css"
-import Link from "next/link"
-import css from "./styles.module.css"
-import { usePathname } from "next/navigation"
+'use client'
+import './main.css'
+import Link from 'next/link'
+import css from './styles.module.css'
+import { usePathname } from 'next/navigation'
 
 // export const metadata = {
 //   title: "Next.js",
@@ -15,14 +15,19 @@ type TRoute = {
 }
 
 const naRoutes: TRoute[] = [
-  { title: "Home", navLink: "/" },
-  { title: "About", navLink: "/about" },
-  { title: "Blog", navLink: "/blog" },
-  { title: "Docs", navLink: "/docs" },
-  { title: "Products", navLink: "/products" },
-  { title: "Profile", navLink: "/profile" },
-  { title: "Dashboard", navLink: "/dashboard" },
-  { title: "Photo Feed", navLink: "/photo-feed" },
+  { title: 'Home', navLink: '/' },
+  { title: 'About', navLink: '/about' },
+  { title: 'Blog', navLink: '/blog' },
+  { title: 'Docs', navLink: '/docs' },
+  { title: 'Products', navLink: '/products' },
+  { title: 'Profile', navLink: '/profile' },
+  { title: 'Dashboard', navLink: '/dashboard' },
+  { title: 'Photo Feed', navLink: '/photo-feed' },
+]
+
+const naRoutesLeft: TRoute[] = [
+  { title: 'Login', navLink: '/login' },
+  { title: 'Register', navLink: '/register' },
 ]
 
 export default function RootLayout({
@@ -36,22 +41,37 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className={css.navContainer}>
-          {naRoutes.map(({ navLink, title }) => {
-            let isActive = pathname.startsWith(navLink)
-            if (navLink === "/" && pathname !== "/") isActive = false
-            return (
-              <Link
-                href={navLink}
-                className={isActive ? css.active : ""}
-                key={navLink}
-              >
-                {title}
-              </Link>
-            )
-          })}
+          <div style={{ width: '100%', display: 'flex', gap: '8px' }}>
+            {naRoutes.map(({ navLink, title }) => {
+              let isActive = pathname.startsWith(navLink)
+              if (navLink === '/' && pathname !== '/') isActive = false
+              return (
+                <Link
+                  href={navLink}
+                  className={isActive ? css.active : ''}
+                  key={navLink}
+                >
+                  {title}
+                </Link>
+              )
+            })}
+          </div>
+            {naRoutesLeft.map(({ navLink, title }) => {
+              let isActive = pathname.startsWith(navLink)
+              if (navLink === '/' && pathname !== '/') isActive = false
+              return (
+                <Link
+                  href={navLink}
+                  className={isActive ? css.active : ''}
+                  key={navLink}
+                >
+                  {title}
+                </Link>
+              )
+            })}
         </div>
         <div className={css.appContainer}>
-          <div style={{ flexGrow: "1", padding: "12px 0" }}>{children}</div>
+          <div style={{ flexGrow: '1', padding: '12px 0' }}>{children}</div>
           <footer style={{ flexGrow: 0 }}>Footer</footer>
         </div>
       </body>
