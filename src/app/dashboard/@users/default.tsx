@@ -1,5 +1,8 @@
-import Card from "@/components/cards/card"
-import React from "react"
+'use client'
+import React from 'react'
+import dynamic from 'next/dynamic'
+
+const Card = dynamic(() => import('@/components/cards/card'))
 
 function Default() {
   return <Card>Default</Card>

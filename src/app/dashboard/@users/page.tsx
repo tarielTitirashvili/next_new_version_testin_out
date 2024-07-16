@@ -1,5 +1,7 @@
-import Card from "@/components/cards/card"
-import React from "react"
+import dynamic from 'next/dynamic'
+import React from 'react'
+
+const Card = dynamic(() => import('@/components/cards/card'))
 
 const UsersPage = () => {
   return <Card>User Analytics</Card>
