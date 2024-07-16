@@ -35,7 +35,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-My Docs
+## My Docs
 
 1. Route groups are used to better organize our project you can unify there pages with same layout error page and related functionalities without changing their url's.
 2. [id] is how we define dynamic routes but if we use [[route]] bubble square brackets we will be able to catch all routes like in example with docs file here, if we call [[...routes]] our file will be able to catch parent route too.
@@ -49,4 +49,4 @@ My Docs
 8. for unmatched routes we need to create default.tsx files too because it is used as a fallback during refreshing page also we need to create default.tsx file in the directory where unmatched routes are created in our case we needed it in dashboard directory
 
 9. intercepted routes we can display different pages by intercepting routes if we will use (.) route we will replace route in same directory if we use (..) will replace route in ../ directory and if we will use (...) will replace route in app directory P.S. example is in f1 folder
-10. hydration is process when after initial html load browser will receive JS and executes it and page becomes interactive in new version of next js is used suspense architecture to split code and make possible separate hydration in components which are inside suspenses. this makes applications interactive faster. ssr and ssg ssr is staticly generated once during build and is stored on server, ssr is rendering on server and it needs hydration on front
+10. hydration is process when after initial html load browser will receive JS and executes it and page becomes interactive in new version of next js is used suspense architecture to split code and make possible separate hydration in components which are inside suspenses. this makes applications interactive faster. ssr and ssg ssr is staticly generated once during build or on server during data revalidation and is stored on server, ssr is rendering on server and it needs hydration on front it can be dynamic or streaming dynamic rendering rerenders during every user at request, streaming means that parts of page UI can be displayed immediately and rendering process can be split into chunks and streamed to the client as it becomes ready.

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
 }
 
 const Profile = () => {
+  console.log('profile page')
   return <div>Profile</div>
 }
 
