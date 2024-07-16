@@ -3,14 +3,14 @@ import Link from 'next/link'
 import React from 'react'
 import dynamic from 'next/dynamic'
 
-const Card = dynamic(() => import('@/components/cards/card'))
+const AsyncCard = dynamic(() => import('@/components/cards/asyncCard'))
 
 const UsersPage = () => {
   return (
-    <Card>
+    <AsyncCard duration={1000}>
       <Link href={'dashboard/archived'}>Archived</Link>
       Notifications
-    </Card>
+    </AsyncCard>
   )
 }
 

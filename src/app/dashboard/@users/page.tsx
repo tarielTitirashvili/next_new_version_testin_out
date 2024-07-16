@@ -1,10 +1,10 @@
 import dynamic from 'next/dynamic'
 import React from 'react'
 
-const Card = dynamic(() => import('@/components/cards/card'))
+const AsyncCard = dynamic(() => import('@/components/cards/asyncCard'))
 
 const UsersPage = () => {
-  return <Card>User Analytics</Card>
+  return <AsyncCard duration={4000}>User Analytics</AsyncCard>
 }
 
 export default UsersPage
