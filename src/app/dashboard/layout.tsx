@@ -1,6 +1,7 @@
-import React from "react"
-import css from "./styles.module.css"
+import React from 'react'
+import css from './styles.module.css'
 import { redirect } from 'next/navigation'
+import ColorThemProvider from '@/components/theme/colors'
 
 type TProps = {
   children: React.ReactNode
@@ -14,16 +15,18 @@ const Layout = (props: TProps) => {
   const isAuth = true // for example this approach for auth check might be not actual
   if (!isAuth) return redirect('/login')
   return (
-    <div>
-      {children}
-      <div className={css.contentContainer}>
-        <div className={css.usersAndRevenueContainer}>
-          {users}
-          {revenue}
+    <ColorThemProvider>
+      <div>
+        {children}
+        <div className={css.contentContainer}>
+          <div className={css.usersAndRevenueContainer}>
+            {users}
+            {revenue}
+          </div>
+          {notifications}
         </div>
-        {notifications}
       </div>
-    </div>
+    </ColorThemProvider>
   )
 }
 
