@@ -61,8 +61,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 11. React server components rendering lifecycle best video explanation is on link https://www.youtube.com/watch?v=o57paErp8Pc&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI&index=51, when user sends initial get request next js informs react to render server components react renders all ssr components that are on the page and saves information about rendered components in RSC payload file which has JSON format and sands non interactive html to the client and then sends RSC payload to inform client side react which components was rendered and based on that client side components will be rendered progressively.
 ## needs check! REFRESH if user refreshes page all steps will be repeated excluding HTML generation n server.
 
-12. we can be sure that server only code will not be used on the front-end by installing and importing server-only library. example in utils/server
+12. we can be sure that server only code will not be used on the front-end by installing and importing server-only library. example in utils/server.
 
-13. UI and React related libraries might not be working in the server components but will work on the client side components so we can encapsulate them in the client components.
+13. just like server only we can use client-only package to check that our code is executing only in client components example is in utils/client.
 
-14. to use context we should create context provider hoc for saving ssr behavior for application so if we will wrap whole route inside client component it not become client side. hoc's are good way to save components client side.
+14. UI and React related libraries might not be working in the server components but will work on the client side components so we can encapsulate them in the client components.
+
+15. to use context we should create context provider hoc for saving ssr behavior for application so if we will wrap whole route inside client component it not become client side. hoc's are good way to save components client side.
