@@ -38,12 +38,18 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## My Docs
 
 1. Route groups are used to better organize our project you can unify there pages with same layout error page and related functionalities without changing their url's.
+
 2. [id] is how we define dynamic routes but if we use [[route]] bubble square brackets we will be able to catch all routes like in example with docs file here, if we call [[...routes]] our file will be able to catch parent route too.
+
 3. layouts aren't replaying each other they are adding on top of their parent components layouts.
+
 4. metadata if you want use dineric metadata you should use generateMetadata function with exact same name and if you want use static one you need to export metadata with same name
    also neither of this will not work in the client side components
+
 5. metadata title property can be object in which we can set up templates for nested routes (if we will write %s in string it will be replaced by children rout's title) and define default property child routes in whom title is not specified, also you can specify absolute property for title which will overwrite parent template completely
+
 6. if we want to have routing behavior which will reset state when user is navigated to new route we should use template in case of layout state wasn't updating
+
 7. error.tsx file will not catch errors in the layout and template files of same directory! also it might be good idea to add reset function for error.tsx component.
 
 8. for unmatched routes we need to create default.tsx files too because it is used as a fallback during refreshing page also we need to create default.tsx file in the directory where unmatched routes are created in our case we needed it in dashboard directory.
@@ -56,3 +62,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## needs check! REFRESH if user refreshes page all steps will be repeated excluding HTML generation n server.
 
 12. we can be sure that server only code will not be used on the front-end by installing and importing server-only library. example in utils/server
+
+13. UI and React related libraries might not be working in the server components but will work on the client side components so we can encapsulate them in the client components.
+
