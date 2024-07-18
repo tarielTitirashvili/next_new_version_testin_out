@@ -1,6 +1,6 @@
 import { whoIsGodHere } from '@/utils/server'
 import React from 'react'
-// import ServerComponentOne from '@/serverOnlyComponent/component'
+import ServerComponentOne from '@/serverOnlyComponent/component'
 
 type Props = {}
 
@@ -9,7 +9,7 @@ const ServerOnlyComponent = (props: Props) => {
   return (
     <div>
       ServerOnlyRoute
-      {/* <ServerComponentOne /> */}
+      <ServerComponentOne />
       {god}
     </div>
   )

@@ -1,16 +1,3 @@
-.navContainer {
-  padding: 16px;
-  display: flex;
-  gap: 8px;
-  background-color: aqua;
-}
-
-.active {
-  color: red;
-}
-.active:hover {
-  color: red;
-}
 
 .appContainer {
   padding: 24px;
