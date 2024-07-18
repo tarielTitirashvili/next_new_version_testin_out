@@ -68,3 +68,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 14. UI and React related libraries might not be working in the server components but will work on the client side components so we can encapsulate them in the client components.
 
 15. to use context we should create context provider hoc for saving ssr behavior for application so if we will wrap whole route inside client component it not become client side. hoc's are good way to save components client side.
+
+16. we can't use server components with server only code inside client components example is in the app directory serverOnlyComponent and server-route in both cases we are getting error because we use use-client in layout
